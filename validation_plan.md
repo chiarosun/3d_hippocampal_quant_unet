@@ -1,6 +1,7 @@
 # Validation Plan - HippoCrop_UNet
 
-### Hippocampal Volume Quantification for Alzheimer's Progression Utilizing Segmentation with a Unet Convolutional Neural Network
+## Hippocampal Volume Quantification for Alzheimer's Progression: 
+### Utilizing Segmentation with a Unet Convolutional Neural Network
 
 ## Algorithm Description
 
@@ -24,7 +25,7 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 
 *Figure 1. AI Clinical Radiology Network:*
 
-![](./images/AI_clin_rad_net.png =200x400) 
+![](./images/AI_clin_rad_net.png) 
 
 
 **U-net Architecture:**
@@ -37,8 +38,8 @@ From the original paper:
 
 *Figure 2: U-net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
 
-#![](./images/u-net-architecture.png =400x) 
-<img src="./images/u-net-architecture.png" alt="drawing" width="200"/>
+#![](./images/u-net-architecture.png) 
+<!--img src="./images/u-net-architecture.png" alt="drawing" width="200"/-->
 
 
 ### 4. Databases
@@ -64,16 +65,16 @@ Medical image segmentation seeks to extract anatomical regions of interest from 
 
 *Figure 3: Sample slices in 3D-slicer showing axial, sagittal, and coronal views:*
 
-![](./images/3d_slicer_hipp_001.png =300x)
+![](./images/3d_slicer_hipp_001.png)
 
 *Figure 4. Sample image depicting Sagittal Slices:* 
 
-![](./images/hippo_crop_sagittal.png =300x)
+![](./images/hippo_crop_sagittal.png)
 
 *Figure 5. Sample hippocampal segmentation showing anterior and posterior areas:*
 
-#![](./images/hippo_crop_sagittal_seg.png =250x)
-<img src="./images/hippo_crop_sagittal_seg.png" alt="drawing" width="300"/>
+#![](./images/hippo_crop_sagittal_seg.png)
+<!-- img src="./images/hippo_crop_sagittal_seg.png" alt="drawing" width="300"/-->
    
 **Splitting the Dataset**
 
@@ -94,19 +95,19 @@ Preliminary results are visualized using Tensorboard in the following figures.
 
 *Figure 6. TensorBoard Training Loss:*
 
-![](./images/tensorboard_training.png =400x) 
+![](./images/tensorboard_training.png) 
 
 *Figure 7. TensorBoard Images and Masks:*
 
-![](./images/tensorboard_img_mask_100-1000.png =300x) 
+![](./images/tensorboard_img_mask_100-1000.png) 
 
 *Figure 8. TensorBoard Masks and Predictions:*
 
-![](./images/tensorboard_mask_pred_100-1000.png = 200x) 
+![](./images/tensorboard_mask_pred_100-1000.png) 
 
 *Figure 9. TensorBoard Predictions and Probability Maps:*
 
-![](./images/tensorboard_pred_prob_100-1000.png =250x) 
+![](./images/tensorboard_pred_prob_100-1000.png) 
 
     4. How was the training performance of the algorithm measured and how is the real-world performance going to be estimated? 
 
@@ -361,17 +362,16 @@ Results fo training are seen below in final recorded json file.
 
 **Clinical Significance and Ground Truth**
 
-Resutling segmentation and quanitification by the AI algorithm will serve to guide radiologists given the performance metric of correct overlap as described above.  Radiologists should be the final arbiters to verify the results of the algorithm.
+Resulting segmentation and quanitification by the AI algorithm will serve to guide radiologists given the performance metric of correct overlap as described above.  Radiologists should be the final arbiters to verify the results of the algorithm.
 
-For example, previous research has shown xxxx and one would expect ranges of measurement to be commensurate given any factoring for necessary disease states. 
+For example, ([research from the UK Biobank](https://www.sciencedirect.com/science/article/pii/S2213158219302542#f0005)) has shown normative ranges for hippocampal volume per gender and age and one would expect ranges of measurement to be commensurate in range given any factoring for necessary disease states. 
 
 Hippocampal volume across age: Nomograms derived from over 19,700 people in UK Biobank, Nobis et al, 2019
-https://www.sciencedirect.com/science/article/pii/S2213158219302542#f0005
+
 
 *Figure 10. Hippocampal Quantification Metrics:*
-https://www.sciencedirect.com/science/article/pii/S2213158219302542#f0005
 
-![](./images/nomogram_fem_right.svg =150x) 
+![](./images/nomogram_fem_right.svg) 
 
 
 **Device Limitations:**
