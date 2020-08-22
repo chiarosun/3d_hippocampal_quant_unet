@@ -24,7 +24,7 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 
 *Figure 1. AI Clinical Radiology Network:*
 
-![](./images/AI_clin_rad_net.png =300x) 
+![](./images/AI_clin_rad_net.png =200x400) 
 
 
 **U-net Architecture:**
@@ -37,7 +37,8 @@ From the original paper:
 
 *Figure 2: U-net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
 
-![](./images/u-net-architecture.png =400x) 
+#![](./images/u-net-architecture.png =400x) 
+<img src="./images/u-net-architecture.png" alt="drawing" width="200"/>
 
 
 ### 4. Databases
@@ -71,7 +72,8 @@ Medical image segmentation seeks to extract anatomical regions of interest from 
 
 *Figure 5. Sample hippocampal segmentation showing anterior and posterior areas:*
 
-![](./images/hippo_crop_sagittal_seg.png =250x)
+#![](./images/hippo_crop_sagittal_seg.png =250x)
+<img src="./images/hippo_crop_sagittal_seg.png" alt="drawing" width="300"/>
    
 **Splitting the Dataset**
 
