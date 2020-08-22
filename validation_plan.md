@@ -1,19 +1,13 @@
-# Validation Plan - HippoCrop_UNet
-
 ## Hippocampal Volume Quantification for Alzheimer's Progression: 
-### Utilizing Segmentation with a Unet Convolutional Neural Network
+### Segmentation with a Unet Convolutional Neural Network
 
-## Algorithm Description
 
 ### 1. General Information
-
-       1.  What is the intended use of the product?
 
 **Intended Use Statement:** 
 The HippoCrop_Unet AI algorithm is intended to aid physicians, namely radiologists, by automatic segmentation and quantification of hippocampal tissue in 3-D volume MRI renderings.
 
 The algorithm is intended to help diagnose and track any progression of Alzheimer's Disease and other forms of Dementia in patients displaying ymptoms of disease, including issues with short and long term memory as well as learning.  Quantification will help guide disease management.
-
 
 ### 2. Algorithm Design and Function
 
@@ -25,8 +19,7 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 
 *Figure 1. AI Clinical Radiology Network:*
 
-![](./images/AI_clin_rad_net.png) 
-
+<img src="./images/AI_clin_rad_net.png" width="50%">
 
 **U-net Architecture:**
 
@@ -38,13 +31,10 @@ From the original paper:
 
 *Figure 2: U-net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
 
-#![](./images/u-net-architecture.png) 
-<!--img src="./images/u-net-architecture.png" alt="drawing" width="200"/-->
+<img src="./images/u-net-architecture.png" alt="drawing" width="50%">
 
 
 ### 4. Databases
-
-    2. How was the training data collected?
 
 **Dataset **
 
@@ -56,7 +46,6 @@ The following details regarding this dataset acquistion are described here:  ([A
 
 Further, all data were made available online under Creative Commons license CC-BY-SA4.0. The data was reformatted from DICOM to NIfTI, an open standard supported by National Institutes of Health (NIH), and as such doesn't require proprietary software.  This serves to ensure open access, consistency and interoperability.
 
-    **3. How did you label your training data?**
 **Labeling of Training Data:**
 
 Medical image segmentation seeks to extract anatomical regions of interest from a medical image or series of images. Semantic segmentation aims to automatically associate each image pixel with a classification label.  The brain tissue was classified as non-hippocampal (background), anterior hippocampal, or posterior hippocampal. 
