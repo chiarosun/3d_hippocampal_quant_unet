@@ -19,7 +19,8 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 
 *Figure 1. AI Clinical Radiology Network:*
 
-<img src="./images/AI_clin_rad_net.png" width="50%">
+![](./images/AI_clin_rad_net.png)
+<!--img src="./images/AI_clin_rad_net.png" width="50%"-->
 
 **U-net Architecture:**
 
@@ -31,7 +32,8 @@ From the original paper:
 
 *Figure 2: U-net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
 
-<img src="./images/u-net-architecture.png" alt="drawing" width="50%">
+[](./images/u-net-architecture.png) 
+<!--img src="./images/u-net-architecture.png" alt="drawing" width="50%"-->
 
 
 ### 4. Databases
