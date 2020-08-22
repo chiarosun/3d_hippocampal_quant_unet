@@ -24,7 +24,7 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 
 *Figure 1. AI Clinical Radiology Network:*
 
-![](./images/AI_clin_rad_net.png =50%) 
+![](./images/AI_clin_rad_net.png =300x) 
 
 
 **U-net Architecture:**
@@ -37,7 +37,7 @@ From the original paper:
 
 *Figure 2: U-net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
 
-![](./images/u-net-architecture.png Final_Project=400x) 
+![](./images/u-net-architecture.png =400x) 
 
 
 ### 4. Databases
@@ -63,15 +63,15 @@ Medical image segmentation seeks to extract anatomical regions of interest from 
 
 *Figure 3: Sample slices in 3D-slicer showing axial, sagittal, and coronal views:*
 
-![](./images/3d_slicer_hipp_001.png)
+![](./images/3d_slicer_hipp_001.png =300x)
 
 *Figure 4. Sample image depicting Sagittal Slices:* 
 
-![](./images/hippo_crop_sagittal.png)
+![](./images/hippo_crop_sagittal.png =300x)
 
 *Figure 5. Sample hippocampal segmentation showing anterior and posterior areas:*
 
-![](./images/hippos_crop_sagittal_seg.png)
+![](./images/hippo_crop_sagittal_seg.png =250x)
    
 **Splitting the Dataset**
 
@@ -81,7 +81,7 @@ The algorithm was trained by splitting the dataset into train, validation, and t
 ### 3. Algorithm Training
 
 We performed out training with the following hyperparameter configuration:
-
+Final_Project
     Loss Function:  CrossEntropyLoss
     Optimizer:  Adam
     Learning Rate:  0.0002
@@ -92,19 +92,19 @@ Preliminary results are visualized using Tensorboard in the following figures.
 
 *Figure 6. TensorBoard Training Loss:*
 
-![](./images/tensorboard_training.png) 
+![](./images/tensorboard_training.png =400x) 
 
 *Figure 7. TensorBoard Images and Masks:*
 
-![](./images/tensorboard_img_mask_100-1000.png) 
+![](./images/tensorboard_img_mask_100-1000.png =300x) 
 
 *Figure 8. TensorBoard Masks and Predictions:*
 
-![](./images/tensorboard_mask_pred_100-1000.png) 
+![](./images/tensorboard_mask_pred_100-1000.png = 200x) 
 
 *Figure 9. TensorBoard Predictions and Probability Maps:*
 
-![](./images/tensorboard_pred_prob_100-1000.png) 
+![](./images/tensorboard_pred_prob_100-1000.png =250x) 
 
     4. How was the training performance of the algorithm measured and how is the real-world performance going to be estimated? 
 
@@ -369,7 +369,7 @@ https://www.sciencedirect.com/science/article/pii/S2213158219302542#f0005
 *Figure 10. Hippocampal Quantification Metrics:*
 https://www.sciencedirect.com/science/article/pii/S2213158219302542#f0005
 
-![](./images/nomogram_fem_right.svg) 
+![](./images/nomogram_fem_right.svg =150x) 
 
 
 **Device Limitations:**
