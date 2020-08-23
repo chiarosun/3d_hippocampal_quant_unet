@@ -19,7 +19,7 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 
 *Figure 1. AI Clinical Radiology Network:*
 
-![](./images/AI_clin_rad_net.png)
+![](./images/AI_clin_rad_net_1.png)
 <!--img src="./images/AI_clin_rad_net.png" width="50%"-->
 
 **U-net Architecture:**
