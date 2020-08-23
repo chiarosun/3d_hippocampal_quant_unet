@@ -1,5 +1,5 @@
 ## Hippocampal Volume Quantification for Alzheimer's Progression: 
-### Segmentation with a Unet Convolutional Neural Network
+### Segmentation with a U-Net Convolutional Neural Network
 
 
 ### 1. General Information
@@ -7,13 +7,13 @@
 **Intended Use Statement:** 
 The HippoCrop_Unet AI algorithm is intended to aid physicians, namely radiologists, by automatic segmentation and quantification of hippocampal tissue in 3-D volume MRI renderings.
 
-The algorithm is intended to help diagnose and track any progression of Alzheimer's Disease and other forms of Dementia in patients displaying ymptoms of disease, including issues with short and long term memory as well as learning.  Quantification will help guide disease management.
+The algorithm is intended to help diagnose and track any progression of Alzheimer's Disease and other forms of Dementia in patients displaying symptoms of disease, including issues with short and long term memory as well as learning.  Quantification will help guide disease management.
 
 ### 2. Algorithm Design and Function
 
-**System Design**
+**System Design:**
 
-The HippoCrop_Unet is an end-to-end AI system which features a machine learning algorithm that integrates into a clinical-grade viewer and automatically measures hippocampal volumes of new patients, as their studies are committed to the clinical imaging archive.  An MRI volume will be pushed to Picture Archive and Communication System (PACS) server over Digital Imagining and Communications in Medicine (DICOM) services.  Each volume will be auto-transferred from the PACS server to an AI server which will screen for volumes designated 'HippoCrop', subsequentially running inference, and returning a results report to the PACS server for viewing through an Open Health Imaging Foundation (OHIF) Viewer.
+The HippoCrop_Unet is an end-to-end AI system which features a machine learning algorithm that integrates into a clinical-grade viewer and automatically measures hippocampal volumes of new patients, as their studies are committed to the clinical imaging archive.  An MRI volume will be pushed to a Picture Archive and Communication System (PACS) server over Digital Imaging and Communications in Medicine (DICOM) services.  Each volume will be auto-transferred from the PACS server to an AI server, which will screen for volumes designated 'HippoCrop', subsequentially running inference, and returning a results report to the PACS server for viewing through an Open Health Imaging Foundation (OHIF) Viewer.
 
 The OHIF Viewer is a zero-footprint medical image viewer provided by the Open Health Imaging Foundation. It is a configurable and extensible progressive web application with out-of-the-box support for image archives which support DICOMweb.  The PACS server may be simulated with Orthanc, a free, open-source, lightweight DICOM server.
 
@@ -22,7 +22,7 @@ The OHIF Viewer is a zero-footprint medical image viewer provided by the Open He
 ![](./images/AI_clin_rad_net_1.png)
 <!--img src="./images/AI_clin_rad_net.png" width="50%"-->
 
-**U-net Architecture:**
+**U-Net Architecture:**
 
 We utilize the U-net CNN archtictecture as described by authors in ([U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015](https://arxiv.org/pdf/1902.09063.pdf)).
 
@@ -30,18 +30,16 @@ The U-Net differs from a standard CNN arhitecture in that it combines the locati
 
 From the original paper:
 
-*Figure 2: U-net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
+*Figure 2: U-Net Archictecture. Source: U-Net: Convolutional Networks for BiomedicalImage Segmentation, Ronneberger et al, May 2015.
 
-[](./images/u-net-architecture.png) 
+![](./images/u-net-architecture.png) 
 <!--img src="./images/u-net-architecture.png" alt="drawing" width="50%"-->
 
 
-### 4. Databases
-
-**Dataset **
-
+### 4. Dataset
 
 **Collection of Training Data:**
+
 The hippocampus training data was gather from the Medical Decathlon competition, found at http://www.medicaldecathlon.com.   This dataset is stored as a collection of 260 Neuroimaging Informatics Technology Initiative (NIfTI) files, with one file per image volume, and one file per corresponding segmentation mask. The original images are T2 MRI scans of the full brain. This dataset utilizes cropped volumes where the region around the hippocampus has been cut out.  
 
 The following details regarding this dataset acquistion are described here:  ([A large annotated medical image dataset for the development and evaluation of segmentation algorithms, Simpson et al, Feb 2019](https://arxiv.org/pdf/1902.09063.pdf)).  From the paper, 'The dataset consisted of MRI acquired in 90 healthy adults and 105 adults with a non-affective psychotic disorder (56 schizophrenia, 32 schizoaffective disorder, and 17 schizophreniform disorder) taken from the Psychiatric Genotype/Phenotype Project data repository at Vanderbilt University Medical Center (Nashville, TN, USA).' As well, 'Structural images were acquired with a 3D T1-weighted MPRAGE sequence(TI/TR/TE, 860/8.0/3.7 ms; 170 sagittal slices; voxel size, 1.0 mm3). All images were collected on a Philips Achieva scanner (Philips Healthcare, Inc., Best, The Netherlands). Manual tracing of the head, body, and tail of the hippocampus on images was completed following a previously published protocol (see reference). For the purposes of this dataset, the term hippocampus includes the hippocampus proper (CA1-4 and dentate gyrus) and parts of the subiculum, which together are more often termed the hippocampal formation. The last slice of head of the hippocampus was defined as the coronal slice containing the uncal apex. The resulting 195 labeled images are referred to as hippocampus atlases. Note that the term hippocampus posterior refers to the union of the body and the tail.'  
@@ -51,8 +49,6 @@ Further, all data were made available online under Creative Commons license CC-B
 **Labeling of Training Data:**
 
 Medical image segmentation seeks to extract anatomical regions of interest from a medical image or series of images. Semantic segmentation aims to automatically associate each image pixel with a classification label.  The brain tissue was classified as non-hippocampal (background), anterior hippocampal, or posterior hippocampal. 
-
-**Findings **
 
 *Figure 3: Sample slices in 3D-slicer showing axial, sagittal, and coronal views:*
 
@@ -75,7 +71,7 @@ The algorithm was trained by splitting the dataset into train, validation, and t
 ### 3. Algorithm Training
 
 We performed out training with the following hyperparameter configuration:
-Final_Project
+
     Loss Function:  CrossEntropyLoss
     Optimizer:  Adam
     Learning Rate:  0.0002
@@ -100,7 +96,6 @@ Preliminary results are visualized using Tensorboard in the following figures.
 
 ![](./images/tensorboard_pred_prob_100-1000.png) 
 
-    4. How was the training performance of the algorithm measured and how is the real-world performance going to be estimated? 
 
 **Performance Metrics**
 
