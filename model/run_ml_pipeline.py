@@ -16,7 +16,7 @@ class Config:
         self.name = "Basic_unet"
         self.root_dir = r""
         #self.n_epochs = 10
-        self.n_epochs = 1
+        self.n_epochs = 10
         self.learning_rate = 0.0002
         self.batch_size = 8
         self.patch_size = 64
@@ -28,8 +28,7 @@ if __name__ == "__main__":
     # Fill in parameters of the Config class and specify directory where the data is stored and 
     # directory where results will go
     c = Config()
-    #c.root_dir = '/home/magellan/Projects/uda_ai_healthcare/Unit2-3D-Imaging/Final_Project/gh_chiaro_stage/src/section1/out'
-    c.root_dir = './../../eda/out'
+    c.root_dir = './../eda/out'
     c.test_results_dir = r"./test_results"
 
     # Load data
@@ -43,7 +42,7 @@ if __name__ == "__main__":
     # multi-fold training to improve your model quality
 
     keys = range(len(data))
-    print('keys: ', type(keys), keys)
+    # print('keys: ', type(keys), keys)
     # Here, random permutation of keys array would be useful in case if we do something like 
     # a k-fold training and combining the results. 
 

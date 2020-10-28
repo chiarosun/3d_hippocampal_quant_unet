@@ -116,6 +116,7 @@ class UNetExperiment:
 
             if (i % 10) == 0:
                 # Output to console on every 10th batch
+                # print(f'i: {i}')
                 print(f"\nEpoch: {self.epoch} Train loss: {loss}, {100*(i+1)/len(self.train_loader):.1f}% complete")
 
                 counter = 100*self.epoch + 100*(i/len(self.train_loader))
@@ -161,7 +162,7 @@ class UNetExperiment:
 
                 loss = self.loss_function(prediction, target[:, 0, :, :])
 
-                print(f"Batch {i}. Data shape {data.shape} Loss {loss}")
+                print(f"Batch {i}. Loss {loss}")
                 # We report loss that is accumulated across all of validation set
                 loss_list.append(loss.item())
 

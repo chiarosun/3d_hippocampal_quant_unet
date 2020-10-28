@@ -3,3 +3,4 @@ __init__.py
 .pth
 .DS_Store
 .ipynb_checkpoints
+.vscode
